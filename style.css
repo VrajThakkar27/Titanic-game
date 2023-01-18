@@ -1,0 +1,136 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer
+{
+    background-color: aqua;
+    background-image: url(Background.avif);
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background-repeat: round;
+}
+
+.titanic
+{
+    background-image: url(titanic.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    bottom: 0px;
+    height: 200px;
+    width: 370px;
+}
+
+.obstacle
+{
+    background-image: url(iceberg.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    bottom: 0px;
+    right: -80px;
+    height: 251px;
+    width: 469px;
+}
+.gameOver
+{
+    /* visibility: hidden; */
+    position: relative;
+    font-size: 50px;
+    left: 30vw;
+    top: 10vw;
+    color: black;
+    overflow: hidden;
+}
+
+.scoreCont
+{
+    position: relative;
+    font-size: 28px;
+    left: 20px;
+    top: 30px;
+    color: white;
+    border: 5px solid #001e80;
+    width: 157px;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.animateTitanicUp
+{
+    animation: titanic 0.7s linear;
+}
+/* .animatetitanicLeft
+{
+    animation: bob2 0.1s linear;
+}
+.animatetitanicRight
+{
+    animation: bob3 0.1s linear;
+} */
+
+.obstacleAni
+{
+    animation: iceberg 2s linear 2s infinite;
+}
+
+@keyframes titanic {
+    0%
+    {
+        bottom: 0px;
+    }
+    50%
+    {
+        bottom:500px
+    }
+    100%
+    {
+        bottom:0px
+    }
+}
+/* 
+@keyframes bob2 {
+    0%
+    {
+
+    }
+} */
+
+@keyframes iceberg {
+    0%
+    {
+        right: -20vw;
+    }
+    100%
+    {
+        right: 110vw;
+    }
+}
+@media screen and (max-width:1000px) {
+    .titanic 
+    {
+        /* height: 200px; */
+        width: 200px;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    .gameOver
+    {
+        display: none;
+    } 
+    .obstacle
+    {
+        height: 200px;
+        width: 300px;
+        /* background-size: 100%; */
+        background-position: bottom;
+    }
+}
